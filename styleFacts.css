@@ -1,0 +1,175 @@
+html {
+    background-image: linear-gradient(120deg, rgb(23, 0, 34) 0%, rgb(91, 0, 175) 40%, rgb(185, 81, 255) 100%);
+}
+
+/*MAIN*/
+.welcomeArticle {
+    margin-left: 18%;
+    margin-right: 18%;
+    text-align: center;
+    font-size: 30px;
+    background: -webkit-linear-gradient(60deg, rgb(255, 196, 0) 0%, rgb(255, 130, 0)100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.facts {
+    background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgba(0,0,0,0.3) 30%, rgba(0,0,0,0.5) 100%);
+    color: #ffffff;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 100px;
+    padding-right: 50px;/*tady stejny jak tam V*/
+    font-family: 'Montserrat', sans-serif;
+    font-size: small;
+}
+
+.subtitle {
+    color: #ffbb00;
+    text-decoration: underline;
+    font-family: "Bebas Neue", sans-serif !important;
+    font-size: x-large;
+    letter-spacing: 2px;
+    margin-left: -50px;/*tady stejny jak tam ^*/
+}
+
+.olFact {
+    padding: 10px;
+}
+
+.closeFacts {
+    font-family: "Bebas Neue", sans-serif !important;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: -40px;
+    background: -webkit-linear-gradient(120deg, rgb(255, 196, 0) 0%, rgb(255, 130, 0)100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.imgLeft1, .imgLeft2, .imgLeft3 {
+    position: absolute;
+    width: 20%;
+    height: auto;
+    border-radius: 50px;
+    margin-left: 40px;
+}
+
+.imgRight1, .imgRight2, .imgRight3 {
+    position: absolute;
+    right: 0px;
+    width: 20%;
+    height: auto;
+    border-radius: 50px;
+    margin-right: 40px;
+}
+
+.imgLeft1, .imgLeft2, .imgLeft3,.imgRight1, .imgRight2, .imgRight3 {
+    transition: 0.3s ease-in-out;
+}
+
+.imgLeft1:hover, .imgLeft2:hover, .imgLeft3:hover, .imgRight1:hover, .imgRight2:hover, .imgRight3:hover {
+    box-shadow: 0px 0px 10px #2b2b2b;
+    cursor: pointer;
+}
+
+/*RESPONSIVENESS*/
+@media screen and (max-width: 1900px){
+    .welcomeArticle {
+        font-size: 25px;
+    }
+    .subtitle {
+        font-size: large;
+    }
+    .facts {
+        font-size: x-small;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    .closeFacts {
+        font-size: 20px;
+    }
+    .imgLeft1, .imgLeft2, .imgLeft3 {
+        border-radius: 30px;
+        margin-left: 15px;
+        width: 18%;
+    }
+    .imgRight1, .imgRight2, .imgRight3 {
+        border-radius: 30px;
+        margin-right: 15px;
+        width: 18%;
+    }
+}
+@media screen and (max-width: 1700px){
+    .welcomeArticle {
+        font-size: 20px;
+    }
+    .subtitle {
+        font-size: medium;
+    }
+    .facts {
+        font-size: xx-small;
+
+    }
+    .closeFacts {
+        font-size: 18px;
+    }
+    .imgLeft1, .imgLeft2, .imgLeft3 {
+        margin-left: 10px;
+        width: 18%;
+    }
+    .imgRight1, .imgRight2, .imgRight3 {
+        margin-right: 10px;
+        width: 18%;
+    }
+}
+@media screen and (max-width: 1500px){
+    .imgLeft1, .imgLeft2, .imgLeft3,.imgRight1, .imgRight2, .imgRight3 {
+        display: none;
+    }
+    .facts {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+}
+@media screen and (max-width: 1100px){
+    .welcomeArticle {
+        font-size: 17px;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .subtitle {
+        font-size: small;
+        margin-left: -30px;
+    }
+    .facts {
+        font-size: 8px;
+        margin-left: 10%;
+        margin-right: 10%;
+        padding: 50px;
+    }
+    .olFact {
+        padding: 5px;
+    }
+    .closeFacts {
+        font-size: 15px;
+        margin-top: 20px;
+    }
+}
+@media screen and (max-width: 700px){
+    .welcomeArticle {
+        font-size: 15px;
+    }
+    .subtitle {
+        font-size: x-small;
+    }
+    .facts {
+        font-size: 6px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .closeFacts {
+        font-size: 12px;
+    }
+}

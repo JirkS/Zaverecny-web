@@ -1,0 +1,233 @@
+html {
+    background-image: linear-gradient(30deg, rgb(53, 208, 255) 0%, rgb(2, 18, 161) 70%,rgb(3, 9, 94) 100%);
+}
+
+/*MAIN*/
+body {
+    padding: 0;
+    margin: 0;
+    }
+
+.ts {
+    margin-left: 2%;
+}
+.title {
+    font-size: 15vw;
+    margin: 0;
+    font-family: 'Titan One';
+    -webkit-text-fill-color: transparent; 
+    -webkit-text-stroke: 3px rgb(255, 196, 0);
+}
+
+.slogan {
+    font-size: 6vw;
+    margin: 0;
+    margin-top: -3vw;
+    font-family: 'Titan One';
+    background-image: linear-gradient(180deg, #ffe600 10%, #df3eff 90%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+
+/*first text*/
+section .text {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    font-size: 1vw;
+    text-align: justify;
+    line-height: 150%;
+    margin: 20px;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+/*Druhej text v obrazku*/
+.picturebg {
+    display: block;
+    position: relative;
+}
+
+.imgbg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.titlePC {
+    display: none;
+}
+
+.pointedUl {
+    padding-left: 30px;
+}
+
+.pointedUl li {
+    list-style-type: circle;
+    padding: 4px;
+}
+
+.titleMobile {
+    display: block;
+    margin: 0;
+    padding: 10px;
+    color: white;
+    font-weight: 700;
+    font-size: 8px;
+    text-align: justify;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.thanksToConcorde {
+    margin: 30px;
+    text-align: center;
+    font-size: 40px;
+    background: -webkit-linear-gradient(60deg, rgb(255, 0, 170) 0%, rgb(255, 196, 0)100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media screen and (max-width: 1900px){
+    section .text {
+        font-size: medium;
+    }
+    .thanksToConcorde {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 1300px){
+    section .text {
+        font-size: small;
+    }
+    .title {
+        -webkit-text-stroke: 2px rgb(255, 196, 0);
+    }
+    .thanksToConcorde {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .thanksToConcorde {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 1500px){
+    .titlePC {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 50%;
+        padding: 2%;
+        color: white;
+        font-weight: 700;
+        font-size: 0.6vw;
+        line-height: 250%;
+        text-align: justify;
+        
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+    .titleMobile {
+        display: none;
+    }
+}
+
+article {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*CAROUSEL*/
+  input[type=radio] {
+    display: none;
+  }
+  .card {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: transform 0.4s ease;
+    cursor: pointer;
+  }
+  .containerImages {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    height: 100%;
+    transform-style: preserve-3d;
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+  }
+  .cards {
+    position: relative;
+    width: 150%;
+    height: 150%;
+    margin-bottom: 500px;
+  }
+  .cimg {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    object-fit: cover;
+  }
+  #item-1:checked ~ .cards #song-2, #item-2:checked ~ .cards #song-3, #item-3:checked ~ .cards #song-4, #item-4:checked ~ .cards #song-1{
+    transform: translatex(-40%) scale(0.8);
+    opacity: 0.4;
+    z-index: 0;
+  }
+  #item-1:checked ~ .cards #song-3, #item-2:checked ~ .cards #song-4, #item-3:checked ~ .cards #song-1, #item-4:checked ~ .cards #song-2 {
+    transform: translatex(0%) scale(0.6);
+    opacity: 0.6;
+    z-index: -1;
+  }
+  #item-1:checked ~ .cards #song-4, #item-2:checked ~ .cards #song-1, #item-3:checked ~ .cards #song-2, #item-4:checked ~ .cards #song-3 {
+    transform: translatex(40%) scale(0.8);
+    opacity: 0.4;
+    z-index: 0;
+  }
+  #item-1:checked ~ .cards #song-1, #item-2:checked ~ .cards #song-2, #item-3:checked ~ .cards #song-3, #item-4:checked ~ .cards #song-4 {
+    transform: translatex(0) scale(1);
+    opacity: 1;
+    z-index: 1;
+  }
+  #item-1:checked ~ .cards #song-1 .cimg, #item-2:checked ~ .cards #song-2 .cimg, #item-3:checked ~ .cards #song-3 .cimg, #item-4:checked ~ .cards #song-4 .cimg {
+    box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+  }
+  
+  @media screen and (max-width: 1300px){
+    .containerImages {
+        width: 60%;
+    }
+    .cards {
+        margin-bottom: 35vw;
+    }
+  }
+  @media screen and (max-width: 1000px){
+    .thanksToConcorde {
+        
+    }
+  }
+  @media screen and (max-width: 800px){
+    .cimg {
+        border-radius: 15px;
+    }
+    .title {
+        -webkit-text-stroke: 1px rgb(255, 196, 0);
+    }
+  }
+  @media screen and (max-width: 500px){
+    .containerImages {
+        width: 60%;
+    }
+    .cimg {
+        border-radius: 10px;
+    }
+  }
