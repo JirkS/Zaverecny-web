@@ -1,0 +1,78 @@
+html {
+    background-image: url("img/planeWithAlps2.jpg");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    color: #000000;
+}
+
+
+.form-box{
+
+    width: 600px;
+    height: 900px;
+}
+
+select {
+    border-radius: 15px;
+    letter-spacing: 3px;
+    padding: 8px;
+    background-color: #000000;
+    color: #fff;
+    font-size: large;
+    width: 400px;
+    font-family: "Bebas Neue", sans-serif !important;
+}
+
+option {
+    color: #fff;
+}
+
+select:hover {
+    cursor: pointer;
+}
+
+button{
+    margin-top: 20px;
+    background-image: linear-gradient(to left, #ff0000, #ffc116, #ff6e0d);
+}
+
+@media screen and (max-width: 1550px){
+    .form-box{
+        width: 400px;
+
+    }
+    button{
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    body {
+        letter-spacing: 2px;
+    }
+    .form-box{
+        width: 250px;
+        height: 730px;
+        font-size: small;
+        border-radius: 50px;
+    }
+    .inputbox{
+        width: 300px;
+    }
+    h2{
+        font-size: 50px;
+        margin-bottom: -40px;
+        margin-top: -20px;
+    }
+    button{
+        margin-top: 0;
+        margin-bottom: 20px;
+        width: 300px;
+    }
+    select{
+        width: 300px;
+    }
+}

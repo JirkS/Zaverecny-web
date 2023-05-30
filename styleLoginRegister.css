@@ -1,0 +1,186 @@
+html {
+    background-image: url("img/planeWithAlps.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 90%;
+    min-height: 100vh;
+    justify-content: center;
+}
+
+body {
+    font-family: "Bebas Neue", sans-serif !important;
+    letter-spacing: 3px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+.backText {
+    margin-top: 18px;
+    font-size: xx-large;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+
+.backImg {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.form-box{
+    position: relative;
+    width: 600px;
+    height: 650px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.8);
+    border-radius: 70px;
+    backdrop-filter: blur(14px);
+    display: flex;
+    justify-content: center;
+    font-size: large;
+    padding: 40px;
+    margin: 40px;
+}
+h2{
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: 70px;
+    margin-top: 30px;
+    letter-spacing: 6px;
+}
+.inputbox{
+    position: relative;
+    margin: 40px 0;
+    width: 400px;
+    border-bottom: 2px solid;
+}
+.inputbox label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: large;
+    pointer-events: none;
+    transition: .5s;
+}
+input:focus ~ label,
+input:valid ~ label{
+    top: -6px;
+}
+
+.inputbox input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding:0 35px 0 5px;
+
+}
+.inputbox ion-icon{
+    position: absolute;
+    right: 10px;
+    font-size: 1.2em;
+    top: 10px;
+}
+.forget{
+    font-size: large;
+
+    text-align: center;
+}
+
+.forget label input{
+    margin-right: 3px;
+    text-align: center;
+    
+}
+a{
+
+    text-decoration: none;
+}
+
+h4 {
+    text-align: center;
+    margin: 30px;
+}
+
+h4 a:hover{
+    text-decoration: underline;
+}
+button{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background-size: 200%;
+    background-image: linear-gradient(to left, #cc00ff, #7100f3, #ff49bf);
+    transition: 0.4s;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
+button:hover{
+    background-position: right;
+    box-shadow: 1px 1px 5px #e0e0e0, -1px -1px 5px #ccc;
+}
+
+.register{
+    font-size: .9em;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+.register p a{
+    text-decoration: none;
+    font-weight: 600;
+}
+.register p a:hover{
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1550px){
+    .form-box{
+        width: 400px;
+        height: 600px;
+    }
+    button{
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    body {
+        letter-spacing: 2px;
+    }
+    .form-box{
+        width: 250px;
+        height: 450px;
+        font-size: small;
+        border-radius: 50px;
+    }
+    .inputbox{
+        width: 300px;
+    }
+    h2{
+        font-size: 50px;
+        margin-bottom: -40px;
+        margin-top: -20px;
+    }
+    button{
+        margin-bottom: 20px;
+    }
+}
