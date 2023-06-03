@@ -20,7 +20,7 @@ a 2 částí:
 - Na začátek je potřeba instalace webového serveru [Xampp](https://www.apachefriends.org)
 - Poté je zapotřebí upravit konfigurační soubor Apache httpd.conf, kde +- upravíte následující část kódu:
 <Directory />
-    AllowOverride __all__
+    AllowOverride **all**
     Require all **granted**
 </Directory>
 - Po stáhnutí věech souborů z tohoto githubu jako zip ho extrahujete a soubory ze složky překopírujete do složky:
