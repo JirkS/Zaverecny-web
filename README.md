@@ -23,7 +23,7 @@ a 2 částí:
     AllowOverride all
     Require all granted
 </Directory>
-- Po stáhnutí věech souborů z tohoto githubu jako zip ho extrahujete a soubory ze složky překopírujete do složky:
+- Po stáhnutí všech souborů z tohoto githubu jako zip ho extrahujete a soubory ze složky překopírujete do složky:
 \Xampp\htdocs\web\
 - Jako finální úkon stačí spustit Xampp server tlačítkem start a do příkazového řádku napsat:
 "localhost/web/home.php" (např)
