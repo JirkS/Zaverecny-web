@@ -19,10 +19,11 @@ a 2 částí:
 ### Instalace a spuštění
 - Na začátek je potřeba instalace webového serveru [Xampp](https://www.apachefriends.org)
 - Poté je zapotřebí upravit konfigurační soubor Apache httpd.conf, kde +- upravíte následující část kódu:
-<Directory />
+"<Directory />
     AllowOverride all
     Require all granted
-</Directory>
+</Directory>"
+
 - Po stáhnutí všech souborů z tohoto githubu jako zip ho extrahujete a soubory ze složky překopírujete do složky:
 \Xampp\htdocs\web\
 - Jako finální úkon stačí spustit Xampp server tlačítkem start a do příkazového řádku napsat:
