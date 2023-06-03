@@ -26,7 +26,7 @@ a 2 částí:
 
 - Po stáhnutí všech souborů z tohoto githubu jako zip ho extrahujete a soubory ze složky překopírujete do složky:
 \Xampp\htdocs\web\
-- Jako finální úkon stačí spustit Xampp server tlačítkem start a do příkazového řádku napsat:
+- Jako finální úkon stačí spustit Xampp server tlačítkem start a do příkazového řádku v internetovém prohlížeči napsat:
 "localhost/web/home.php" (např)
 - Pro kunkční přohlašování a registraci je třeba aby Vám na localhostovy běžel server s MySQL databází
 
