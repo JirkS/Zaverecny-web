@@ -1,6 +1,6 @@
 # OREARIA website
 
-web je rozdšlen do 4 ténatických částí/jednotlivých stránek:
+web je rozdšlen do 4 tématických částí/jednotlivých stránek:
 - home
 - the Concorde
 - facts
@@ -20,7 +20,7 @@ a 2 částí:
 - Na začátek je potřeba instalace webového serveru [Xampp](https://www.apachefriends.org)
 - Poté je zapotřebí upravit konfigurační soubor Apache httpd.conf, kde +- upravíte následující část kódu:
 <Directory />
-    AllowOverride **all**
+    AllowOverride __all__
     Require all **granted**
 </Directory>
 - Po stáhnutí věech souborů z tohoto githubu jako zip ho extrahujete a soubory ze složky překopírujete do složky:
