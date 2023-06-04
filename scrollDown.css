@@ -1,0 +1,32 @@
+#scrollDown {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -150px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 100px;
+    margin-bottom: 50px;
+    padding: 10px;
+    letter-spacing: 2px;
+    font-size: x-large;
+}
+
+/*RESPONSIVITY*/
+@media screen and (max-width: 1700px) {
+    #scrollDown {
+        font-size: large;
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #scrollDown {
+        font-size: medium;
+        width: 100px;
+    }
+}
