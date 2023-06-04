@@ -29,7 +29,7 @@ a 2 částí:
 \Xampp\htdocs\web\
 - Jako finální úkon stačí spustit Xampp server tlačítkem start a do příkazového řádku v internetovém prohlížeči napsat:
 "localhost/web/home.php" (např)
-- Pro kunkční přohlašování a registraci je třeba aby Vám na localhostovy běžel server s MySQL databází
+- Pro funkční přohlašování a registraci je třeba aby Vám na localhostovy běžel server s MySQL databází
 
 ### Funkce
 - Všechny stránky jsou plně responzivní.
