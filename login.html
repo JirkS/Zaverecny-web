@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="styleLoginRegister.css" />
+    <link rel="icon" href="img/airplaneIcon.png" />
+    <link rel="stylesheet" href="scrollBar.css" />
+    <script src="mainLoginRegister.js" defer></script>
+    <title>Log In</title>
+  </head>
+  <body>
+    <header>
+      <a href="index.php"
+        ><img class="backImg" src="img/arrowBack.png" alt=""
+      /></a>
+      <a id="lastPage" href="index.php"
+        ><p class="backText">back on previos page</p></a
+      >
+    </header>
+    <section>
+      <div class="form-box">
+        <div class="form-value">
+          <form action="login/logme.php" method="POST">
+            <h2>Login</h2>
+
+            <div class="inputbox">
+              <ion-icon name="mail-outline"
+                ><img src="img/mail.png" alt=""
+              /></ion-icon>
+              <input name="email" type="text" required />
+              <label for="email">Email</label>
+            </div>
+
+            <div class="inputbox">
+              <ion-icon name="lock-closed-outline"
+                ><img src="img/lock.png" alt=""
+              /></ion-icon>
+              <input name="password" type="password" required />
+              <label for="password">Password</label>
+            </div>
+
+            <div class="forget">
+              <label for="checkbox"
+                ><input name="checkbox" type="checkbox" /> Remember Me
+              </label>
+            </div>
+            <h4><a href="">Forget Password</a></h4>
+
+            <button>Log in</button>
+
+            <div class="register">
+              <p>
+                Don't have an account?
+                <a class="register" href="register.html">Register</a>
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

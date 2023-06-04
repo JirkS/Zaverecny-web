@@ -1,0 +1,24 @@
+/*width*/
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 13px;
+}
+
+/*Handle on hover*/
+::-webkit-scrollbar-thumb:hover {
+  background: #585858;
+}
+
+/*Track*/
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+  
+/*Handle*/
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#414141, #3b3b3b);
+  border-left: solid 4px black;
+  border-bottom-left-radius: 100px;
+  border-top-left-radius: 100px;
+  padding-left: 5px;
+}

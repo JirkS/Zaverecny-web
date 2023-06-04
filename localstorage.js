@@ -1,0 +1,1 @@
+localStorage.setItem("page", JSON.stringify(location.pathname.substring(location.pathname.lastIndexOf("/") + 1)));
