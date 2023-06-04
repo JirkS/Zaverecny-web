@@ -3,7 +3,7 @@
 include 'DBC.php';
 
 if (empty($_POST["first_name"]) || empty($_POST["last_name"]) || empty($_POST["age"]) || empty($_POST["country"]) || empty($_POST["email"]) || !str_contains($_POST["email"], '@') ||empty($_POST["password"]) || empty($_POST["password2"])) {
-    header('Location: /web/index.php');
+    header('Location: /web/home.php');
     DBC::closeConnection();
     exit();
 }

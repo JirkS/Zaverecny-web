@@ -1,8 +1,15 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require '../phpMailer/src/Exception.php';
+require '../phpMailer/src/PHPMailer.php';
+require '../phpMailer/src/SMTP.php';
+
 include 'DBC.php';
 
 if (empty($_POST["email"]) || empty($_POST["password"])) {
-    header('Location: /index.php');
+    header('Location: /web/home.php');
     DBC::closeConnection();
     exit();
 }
@@ -21,40 +28,86 @@ function verifyUser($email, $password){
         if(password_verify($password, $user[2])){
             $_SESSION["first_name"] = $user[0];
             $_SESSION["last_name"] = $user[1];
-            if(!isset($_SESSION['numOfFailed'])) {
-                $_SESSION['numOfFailed'] = 0;
-            }
-            header("Location: /web/index.php");
+            header("Location: /web/home.php");
             DBC::closeConnection();
             return;
+        } else {
+            $fileName = "userFailedLogIn.json";
+            $checkEmailExistNum = 0;
+            if(filesize("userFailedLogIn.json") == 0){
+                $record = array(
+                    "email" => $email,
+                    "numberOfFailedLogIn" => 1,
+                    "message" => "Someone is trying to get into your acount!"
+                );
+                $firstRecord = array($record);
+                $dataToSave = $firstRecord;
+            } else {
+                $json = file_get_contents($fileName);
+                $jsonData = json_decode($json, true);
+
+                $i = 0;
+                foreach($jsonData as $user) {
+                    if($user['email'] == $email) {
+                        $checkEmailExistNum = $user['numberOfFailedLogIn'];
+                        unset($jsonData[$i]);
+                        break;
+                    }
+                    $i++;
+                }
+
+                if($checkEmailExistNum > 0) {
+                    $record = array(
+                        "email" => $email,
+                        "numberOfFailedLogIn" => $checkEmailExistNum + 1,
+                        "message" => "Someone is trying to get into your acount!"
+                    );
+                } else {
+                    $record = array(
+                        "email" => $email,
+                        "numberOfFailedLogIn" => 1,
+                        "message" => "Someone is trying to get into your acount!"
+                    );
+                }
+                array_splice($jsonData, $i, 0, array($record));
+                $dataToSave = $jsonData;
+            }
+            file_put_contents($fileName, json_encode($dataToSave));
+
+            if($checkEmailExistNum > 3 && $checkEmailExistNum % 4 == 0) {
+                $mail = new PHPMailer(true);
+
+                $mail->isSMTP();
+                $mail->Host = 'smtp.gmail.com';
+                $mail->SMTPAuth = true;
+                $mail->Username = 'node10mailer@gmail.com';
+                $mail->Password = 'rmvsjybxtpplzhtg';
+                $mail->SMTPSecure = 'tls';
+                $mail->Port = 587;
+
+                $mail->setFrom = 'node10mailer@gmail.com';
+                $mail->FromName = 'OREARIA';
+                $mail->addAddress($email);
+
+                $mail->isHTML(true);
+
+                $mail->Subject = "Security alert";
+                $mail->Body = "Hello, it looks like someone is trying to break your password to your account.";
+
+                /*$mail->send();*/
+
+                if (!$mail->Send())
+                {
+                  echo "Error: $mail->ErrorInfo";
+                }
+                else
+                {
+                  echo "Message Sent!";
+                }
+            }
         }
     }
     $_SESSION["error"] = "Invalid login";
-    if(!isset($_SESSION['numOfFailed'])) {
-        $_SESSION['numOfFailed'] = 1;
-    } else {    
-        $_SESSION['numOfFailed']++;
-    }
-    /*echo $_SESSION['numOfFailed'];*/
-    if($_SESSION['numOfFailed'] % 3 == 0) {
-        $fileName = "userFailedLogIn.json";
-        $record = array(
-            "email" => $email,
-            "numberOfFailedLogIn" => $_SESSION['numOfFailed'],
-            "message" => "Someone is trying to get into your acount!"
-        );
-
-        if(filesize("userFailedLogIn.json") == 0){
-            $firstRecord = array($record);
-            $dataToSave = $firstRecord;
-        } else {
-            $json = json_decode(file_get_contents($fileName), true);
-            array_push($json, $record);
-            $dataToSave = $json;
-        }
-
-        file_put_contents("userFailedLogIn.json", json_encode($dataToSave));
-    }
     header("Location: /web/login.html");
     DBC::closeConnection();
 }
