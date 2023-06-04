@@ -42,8 +42,9 @@ a 2 částí:
 - Animace (např u buttonu) zpříjemňují uživatelský zážitek
 - concorde nabízí overlined text, prochání obrázku (carousel) a obrazek s textem, který se při zmenšní obrazovky přemístí pod obrázek
 - api fligts využívá volání API letů v určitém časovém úseku, využívá i klihovnu Partisles-JS s kerou si můžete hrát myší během načítání dat, které obsahuje animační loading, zárověň stránka obsahuje event na klávesu "R", která zvonu zavolá request na API
-- footer obsahuje několik odkazů na autora stránkya podobně
+- footer obsahuje několik odkazů na autora stránky a podobně (také plně respozivní)
 - header má intuitivní animace s logem na levém okraji a na pravém se nachází tlačítka pro přihlášení a registraci
+    - zárověň při zmenšení se header přemení na tzv. hamburger menu, tím je header také plně respozivní
 - register je pouze formulář a pokud je vše v pořádku vyplněné jste rovnou přesměrováni na login a jste zapsáni v databázi
 - login obsahuje jednoduchý login s emailem a heslem
     - pokud jsou pole vyplněná korektně, jste přihlášeni, to poznáte tak, že Vaše jméno se nachází místo "Sign In" a místo "Sing up" je "Log Off"
