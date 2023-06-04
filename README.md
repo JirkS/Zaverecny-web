@@ -41,7 +41,7 @@ a 2 částí:
 - Web obsahuje obrázky, rozsáhlé texty, či texty s linear-gradient barvou a stejně tak i pozadí stránky je linear-gradient barva
 - Animace (např u buttonu) zpříjemňují uživatelský zážitek
 - concorde nabízí overlined text, procházení obrázků (carousel) a obrázek s textem, který se při zmenšní obrazovky přemístí pod obrázek
-- api fligts využívá volání API letů v určitém časovém úseku od firmy [OpenSky](https://opensky-network.org), využívá i klihovnu Partisles-JS se kterou si můžete hrát pohybem myši během načítání dat, které obsahuje animační loading, zárověň stránka obsahuje event na klávesu "R", která zvonu zavolá request na API (event)
+- api fligts využívá volání API letů v určitém časovém úseku od firmy [OpenSky](https://opensky-network.org), využívá i klihovnu Partisles-JS se kterou si můžete hrát pohybem myši během načítání dat, které obsahuje animační loading, zárověň stránka obsahuje event na klávesu "R", která zvonu zavolá request na API (Partosles-JS, event)
 - footer obsahuje několik odkazů na autora stránky a podobně (také plně respozivní)
 - header má intuitivní animace s logem na levém okraji a na pravém se nachází tlačítka pro přihlášení a registraci
     - zárověň při zmenšení se header přemení na tzv. hamburger menu, tím je header také plně respozivní
