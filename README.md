@@ -1,12 +1,12 @@
 # OREARIA website
 
-web je rozdělen do 4 tématických částí/jednotlivých stránek:
+Web je rozdělen do 4 tématických částí/jednotlivých stránek:
 - home
 - the Concorde
 - facts
 - api flights
 
-a 2 částí:
+a 2 podčástí:
 - login
 - register
 
@@ -18,18 +18,18 @@ a 2 částí:
 - Mezi technologie, které web využívá, patří knihovny PHPMailer, Partisles-JS, Anime-JS, BootStrap, JQuery a Ajax.
 
 ### Instalace a spuštění
-- Na začátek je potřeba instalace webového serveru [Xampp](https://www.apachefriends.org)
+- V úvodu je potřeba instalace webového serveru [Xampp](https://www.apachefriends.org).
 - Poté je zapotřebí upravit konfigurační soubor Apache httpd.conf, kde +- v polovině upravíte následující část kódu:
 "<Directory />
     AllowOverride all
     Require all granted
-</Directory>"
+</Directory>".
 
 - Po stáhnutí všech souborů z tohoto githubu jako zip ho extrahujte a soubory ze složky překopírujete do složky:
-\Xampp\htdocs\web\
-- Jako finální úkon stačí spustit Xampp server tlačítkem start a do příkazového řádku v internetovém prohlížeči napsat:
-"localhost/web/home.php" (např)
-- Pro funkční přihlašování a registraci je třeba aby Vám na localhostovy běžel server s MySQL databází
+\Xampp\htdocs\web\.
+- Na závěr stačí spustit Xampp server tlačítkem start a do příkazového řádku v internetovém prohlížeči napsat:
+"localhost/web/home.php" (např).
+- Pro funkční přihlašování a registraci je třeba aby Vám na localhostovy běžel server s MySQL databází.
 
 ### Funkce
 - Všechny stránky jsou plně responzivní.
