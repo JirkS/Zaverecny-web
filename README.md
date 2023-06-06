@@ -43,11 +43,11 @@ a 2 podčástí:
 - Concorde nabízí overlined text, procházení obrázků (carousel) a obrázek s textem, který se při zmenšní obrazovky přemístí pod obrázek.
 - Api fligts využívá volání API letů v určitém časovém úseku od firmy [OpenSky](https://opensky-network.org), využívá i knihovnu Partisles-JS se kterou si můžete hrát pohybem myši během načítání dat, které obsahuje animační loading, zárověň stránka obsahuje event na klávesu "R", která znovu zavolá request na API (Partosles-JS, event).
 - Footer obsahuje několik odkazů na autora stránky a podobně (také plně respozivní).
-- Header má intuitivní animace s logem na levém okraji a na pravém se nachází tlačítka pro přihlášení a registraci.
-    - zárověň při zmenšení se header přemení na tzv. hamburger menu, tím je header také plně respozivní.
-- Register je pouze formulář a pokud je vše v pořádku vyplněné jste rovnou přesměrováni na login a Váš účet je zapsán v databázi.
+- Header má intuitivní animace s logem na levém okraji, na pravém okraji se nachází tlačítka pro přihlášení a registraci.
+    - zárověň při zmenšení se header přemění na tzv. hamburger menu, tím je header také plně respozivní.
+- Register je pouze formulář a pokud je vše v pořádku vyplněné, jste rovnou přesměrováni na login a Váš účet je zapsán v databázi.
 - Login obsahuje jednoduchý login s emailem a heslem.
     - pokud jsou pole vyplněná korektně, jste přihlášeni, to poznáte tak, že Vaše jméno se nachází místo "Sign In" a místo "Sing up" je "Log Off".
-    - je zde implementovaná SESSION, podle které se indetifikuje zda jste přihlášni, nebo nikoli (SESSION).
-    - po každém jednom špatném pokusu o zalogování je tato informace zapsána do souboru na logování (json) pro jednotlivý účet (to znamená, že každý účet, který má alespoň jedno špatné zalogování, je pouze jednou v souboru na logování s počtem pokusů zalogování).
-    - zároveň po každých 5 pokusech je na danou emailovou adresu zaslán mail, s tím, že se někdo poravděpodobně snaží dostat do jeho účtu (PHPMailer).
+    - je zde implementovaná SESSION, podle které se indetifikuje, zda jste přihlášni nebo nikoli (SESSION).
+    - po každém špatném pokusu o zalogování je tato informace zapsána do souboru na logování (json) pro jednotlivý účet (to znamená, že každý účet, který má alespoň jedno špatné zalogování, je pouze jednou v souboru na logování s počtem špatných pokusů zalogování).
+    - zároveň po každých 5 pokusech je na danou emailovou adresu zaslán mail s infomací, že se někdo poravděpodobně snaží přihlásit do jeho účtu (PHPMailer).
